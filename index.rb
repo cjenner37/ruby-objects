@@ -31,6 +31,8 @@ class Elevator
 		if @floor < 12
 			@floor += 1 
 			cheery_greeting
+		else
+			puts "You can't go up past the top, mate."
 		end
 	end
 
@@ -38,6 +40,8 @@ class Elevator
 		if @floor > 0
 			@floor -= 1
 			cheery_greeting
+		else
+			puts "Go down? You're at the bottom, dear person."
 		end
 	end
 
