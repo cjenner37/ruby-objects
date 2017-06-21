@@ -45,12 +45,15 @@ class Elevator
 		end
 	end
 
-	def go_to(x)
+	def go_to
+		puts "Which floor would the human require?"
+		x = gets.to_i
 		if x < 13 && x > 0
 			@floor = x
 			cheery_greeting
 		else
-			puts "that's not a real floor ya dingus"
+			puts "that's not a real floor ya dingus. the top floor is 12 and the bottom is 1"
+			go_to
 		end
 	end
 
@@ -59,7 +62,4 @@ class Elevator
 	end
 
 end
-
-elevator = Elevator.new
-puts elevator.go_to(4)
 
