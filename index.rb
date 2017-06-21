@@ -17,7 +17,7 @@ class Calculator
 end
 
 # myCalculator = Calculator.new 37, 25
-puts Calculator.divide 6, 2
+# puts Calculator.divide 6, 2
 
 
 class Elevator
@@ -41,6 +41,15 @@ class Elevator
 		end
 	end
 
+	def go_to(x)
+		if x < 13 && x > 0
+			@floor = x
+			cheery_greeting
+		else
+			puts "that's not a real floor ya dingus"
+		end
+	end
+
 	def cheery_greeting
 		puts "Bless thee, good neighbors, what cheer? Please enjoy floor #{@floor}."
 	end
@@ -48,4 +57,5 @@ class Elevator
 end
 
 elevator = Elevator.new
-elevator.go_up
+puts elevator.go_to(4)
+
